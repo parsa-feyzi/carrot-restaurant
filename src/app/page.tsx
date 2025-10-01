@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MenuBox from "@/components/MenuBox";
 import ProductBox from "@/components/ProductBox";
@@ -28,7 +29,7 @@ export default async function Home() {
             <div className="font-bold text-4xl text-neutral-900 pb-8">Top dishes near you</div>
             <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-8">
               {
-                foods.map((food: I_Food) => <ProductBox {...food} key={food._id} />)
+                foods.slice(0, 16).map((food: I_Food) => <ProductBox {...food} key={food._id} />)
               }
             </div>
           </div>

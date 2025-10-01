@@ -4,7 +4,10 @@ import LayoutMain from "@/components/LayoutMain";
 import { I_Children } from "@/types/types";
 
 export const metadata: Metadata = {
-  title: "Carrot Resaurant",
+  title: {
+    default: "carrot",
+    template: "carrot | %s"
+  },
   description: "Carrot Resaurant ",
 };
 
