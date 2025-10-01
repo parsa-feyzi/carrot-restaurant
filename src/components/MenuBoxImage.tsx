@@ -4,17 +4,18 @@ import React, { useState } from "react";
 
 interface I_MenuBoxImage {
   image: string;
+  isMenuCategory?: boolean;
 }
 
-function MenuBoxImage({ image }: I_MenuBoxImage) {
+function MenuBoxImage({ image, isMenuCategory }: I_MenuBoxImage) {
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   return (
     <img
       onClick={() => setIsMenuActive(!isMenuActive)}
-      className={`${
-        isMenuActive ? "border-4 !border-(--prim)" : ""
-      } rounded-full shadow-md cursor-pointer size-26`}
+      className={`${isMenuActive ? "border-4 !border-(--prim)" : ""}
+      ${isMenuCategory ? "size-14" : "size-26"}
+      rounded-full shadow-md cursor-pointer`}
       src={`/foods/${image}.png`}
       alt=""
     />
