@@ -47,7 +47,14 @@ body {
 
 
 /* costome style */
-
 .product_box:hover .product_box_img {
   @apply opacity-80 duration-300
+}
+
+.menu_category::-webkit-scrollbar {
+  width: 5px;
+}
+
+.menu_category::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 cursor-pointer
 }
