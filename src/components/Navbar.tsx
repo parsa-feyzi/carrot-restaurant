@@ -4,7 +4,7 @@ import NavItems from "./NavItems";
 
 function Navbar() {
   return (
-    <div className="py-6 flex items-center justify-between">
+    <nav className="py-6 flex items-center justify-between">
       <Link href="/">
         <img className="w-30" src="/icons/icon.png" alt="" />
       </Link>
@@ -20,7 +20,7 @@ function Navbar() {
             sign in
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
