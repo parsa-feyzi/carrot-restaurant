@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="mt-6">
+    <header className="mt-6">
       <div className="rounded-2xl relative overflow-hidden w-full">
         <img src="/foods/header_img.png" className="w-full" alt="" />
         <div className="absolute top-0 left-0 w-full h-full bg-black/30 flex flex-col justify-end px-[6vw] py-[8vh] text-white">
@@ -19,7 +19,7 @@ function Header() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 
