@@ -56,7 +56,7 @@ function CartItem({ id }: I_CartItem) {
         <div className="flex flex-col justify-between items-end">
           <div
             onClick={() => deleteItemFromCartHandler(id)}
-            className="cursor-pointer text-black/50 hover:text-black/80 active:scale-95"
+            className="cursor-pointer text-black/40 hover:text-black/80 active:scale-95"
           >
             <CloseRoundedIcon />
           </div>

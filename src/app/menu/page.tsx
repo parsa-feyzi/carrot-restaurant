@@ -4,6 +4,7 @@ import axios from "axios";
 import { Metadata } from "next";
 import MenuCategoryBox from "./components/MenuCategoryBox";
 import PaginationButton from "./components/PaginationButton";
+import SearchInpot from "./components/SearchInpot";
 
 export const metadata: Metadata = {
   title: "menu",
@@ -31,9 +32,9 @@ async function Menu({ searchParams }: I_MenuProps) {
 
   return (
     <div className="mt-6 lg:grid lg:grid-cols-12 gap-6 relative">
-      <div className="lg:block hidden sticky !h-[calc(100vh-2.5rem)] top-5 col-span-3 p-4 pe-0">
-        <div></div>
-        <div className="menu_category h-full overflow-y-auto pe-4">
+      <div className="lg:block hidden sticky !h-[calc(100vh-5rem)] top-5 col-span-3 ps-4 pb-6">
+        <SearchInpot />
+        <div className="menu_category mt-4 h-full overflow-y-auto pe-4">
           {menus.map((menu: I_Menu, index: number) => (
             <MenuCategoryBox
               isLatest={index + 1 === menus.length}

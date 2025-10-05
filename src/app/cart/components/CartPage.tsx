@@ -7,6 +7,8 @@ import CartItem from "./CartItem";
 import { useEffect, useState } from "react";
 import { I_Food } from "@/types/types";
 import axios from "axios";
+import Input from "@/components/designSystem/Input";
+import Button from "@/components/designSystem/Button";
 
 function CartPage() {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -39,7 +41,9 @@ function CartPage() {
     getAllFoodsHandler();
     setIsEmpity(() => {
       if (localStorage.getItem("cartItems")) {
-        return !Boolean(JSON.parse(localStorage.getItem("cartItems") as string).length);
+        return !Boolean(
+          JSON.parse(localStorage.getItem("cartItems") as string).length
+        );
       }
       return false;
     });
@@ -56,28 +60,17 @@ function CartPage() {
           </div>
           <div className="lg:block hidden col-span-3 sticky h-fit !max-h-[calc(100vh-2.5rem)] top-5">
             <div className="w-full mb-4 border-2 border-amber-950/10 bg-amber-100/5 p-4 rounded-lg">
-              <div className="flex justify-between items-center">
-                <div className="text-lg ">Total Price :</div>
-                <div className="text-xl text-(--seco)">${totalPrice}</div>
+              <div className="mb-6">
+                <div className="flex justify-between items-center ">
+                  <div className="text-lg ">Total Price :</div>
+                  <div className="text-xl text-(--seco)">${totalPrice}</div>
+                </div>
               </div>
-              <div className="p-3 bg-(--prim) text-white text-center rounded-xl cursor-pointer active:scale-95 mt-6">
-                sign in and purchase
-              </div>
+              <Button style={{ width: "100%" }}>sign in and purchase</Button>
             </div>
             <div className="w-full border-2 border-amber-950/10 bg-amber-100/5 p-4 rounded-lg">
               <div>
-                {/* <label className="cursor-pointer text-sm" htmlFor="discount_code">Enter Discount Code</label> */}
-                <div className="border-2 mt-1 text-sm border-amber-950/10 flex p-1 rounded-lg">
-                  <input
-                    id="discount_code"
-                    placeholder="discount code..."
-                    className="outline-none w-[calc(100%-3rem)] px-2"
-                    type="text"
-                  />
-                  <button className="rounded-md text-white bg-(--prim) text-sm py-1.5 px-3 cursor-pointer active:scale-95">
-                    apply
-                  </button>
-                </div>
+                <Input placeholder="discount code" buttonContent="apply" />
                 <div className="text-neutral-600 text-xs mt-4">
                   if you have a discount code, enter it in the box above to
                   apply the discount to the food items in your cart.
