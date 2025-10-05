@@ -13,8 +13,8 @@ function MenuBoxImage({ image, isMenuCategory }: I_MenuBoxImage) {
   return (
     <img
       onClick={() => setIsMenuActive(!isMenuActive)}
-      className={`${isMenuActive ? "border-4 !border-(--prim)" : ""}
-      ${isMenuCategory ? "size-14" : "size-26"}
+      className={`${isMenuActive ? "border-4 !border-(--prim)/70" : ""}
+      ${isMenuCategory ? "size-14" : "md:size-26 size-22"}
       rounded-full shadow-md cursor-pointer`}
       src={`/foods/${image}.png`}
       alt=""

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import LayoutMain from "@/components/LayoutMain";
 import { I_Children } from "@/types/types";
+import "./globals.css";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export const metadata: Metadata = {
   title: {

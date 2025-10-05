@@ -15,7 +15,7 @@ function NavItems() {
   const route = usePathname()
 
   return (
-    <div className="flex items-center justify-center gap-8 text-(--seco)">
+    <div className="md:flex hidden items-center justify-center lg:gap-8 gap-5 text-(--seco)">
       {navs.map((nav) => (
         <Link href={nav.href} className={`${ route === nav.href ? "border-b-2 border-(--seco)" :  "hover:border-b-2 duration-50 hover:border-(--seco)"} font-medium`} key={nav.href}>
           {nav.title}

@@ -4,7 +4,7 @@ import MediaLinks from "./MediaLinks";
 
 function Footer() {
   return (
-    <footer className="bg-neutral-800 pt-20 pb-4 mt-12">
+    <footer className="bg-neutral-800 pt-20 pb-4 mt-24">
       <Container>
         <div className="flex flex-wrap pb-10 mb-8 border-b-2 border-white/10 gap-[10vw]">
           <div>

@@ -1,14 +1,8 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
+import CartPage from "./components/CartPage";
 
-export const metadata: Metadata = {
-    title: "cart",
-    description: "carrot cart",
-};
+export const metadata: Metadata = { title: "cart", description: "carrot cart" };
 
-function Cart() {
-  return (
-    <div>Cart</div>
-  )
-}
+const Cart = () => <CartPage />;
 
-export default Cart
+export default Cart;

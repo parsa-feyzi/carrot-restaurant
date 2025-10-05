@@ -5,7 +5,7 @@ type T_MenuCategoryBox = I_Menu & { isLatest: boolean }
 
 function MenuCategoryBox({ menu_image, menu_name, isLatest }: T_MenuCategoryBox) {
     return (
-      <div className={`${isLatest ? "" : "border-b border-black/10"} flex py-2.5 gap-3 items-center`}>
+      <div className={`${isLatest ? "" : "border-b border-black/7"} flex py-2.5 gap-3 items-center`}>
           <div>
               <MenuBoxImage image={menu_image} isMenuCategory />
           </div>

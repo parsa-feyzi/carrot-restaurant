@@ -1,3 +1,5 @@
+'use client'
+
 import { I_Menu } from "@/types/types"
 import MenuBoxImage from "./MenuBoxImage"
 
@@ -7,7 +9,7 @@ function MenuBox({ menu_image, menu_name }: I_Menu) {
         <div>
             <MenuBoxImage image={menu_image} />
         </div>
-        <div className="text-lg text-gray-500">
+        <div className="md:text-lg text-gray-600">
             { menu_name }
         </div>
     </div>
